@@ -310,3 +310,91 @@ header {
   padding: 11px 29px;
   text-align: center;
 }
+
+/* Form Style */
+.contact {
+  margin-top: 55px;
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+.contact-title span {
+  font-size: 35px;
+  text-transform: uppercase;
+  width: 165px;
+  height: 47px;
+  margin: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.contact-title::before,
+.contact-title::after {
+  content: "";
+  background: red;
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-photo {
+  width: 444px;
+  height: 317px;
+}
+
+.contact-form {
+  width: 444px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-self: center;
+  gap: 20px;
+}
+
+input[type="text"] {
+  padding: 15px;
+  border-radius: 3px;
+}
+
+textarea {
+  height: 140px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid red;
+}
+button {
+  width: 50px;
+  align-self: flex-end;
+}
+
+form > label {
+  font-size: 10px;
+}
+
+.contact-form a {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+  border: 2px solid red;
+  border-radius: 30px;
+  align-self: flex-end;
+  width: 142px;
+  height: 40px;
+  padding: 10px 52px;
+}
