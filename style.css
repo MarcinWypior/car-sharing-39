@@ -14,6 +14,7 @@ a {
 }
 
 .hero {
+  z-index: 9;
   height: calc(100vh - 55px);
   background: url("../images/Image.jpg");
   background-position: center center;
@@ -31,9 +32,9 @@ header {
   color: white;
 }
 
-.overlay {
-  z-index: 9;
-  background-color: rgba(0, 0, 0, 0.2);
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: calc(100vh - 55px);
   position: absolute;
@@ -44,8 +45,11 @@ header {
 /* navbar styles */
 .navbar {
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #00000066;
   text-transform: uppercase;
+  position: relative;
+  z-index: 9;
+  border: 2px solid #ffffff33;
 }
 
 .navbar-container {
@@ -80,13 +84,19 @@ header {
   padding: 40px;
 }
 
+.links a:hover {
+  background-color: #ffffff33;
+}
+
 /* info styles */
 
 .header-main {
+  height: calc(100vh - 88px);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .info-text {
@@ -95,7 +105,7 @@ header {
 }
 
 .info-title {
-  font-size: 3vh;
+  font-size: 27px;
 }
 .info {
   display: flex;
@@ -105,17 +115,19 @@ header {
 }
 
 .button-first {
+  font-size: 22px;
   background: red;
   color: white;
   border-radius: 50px;
-  padding: 15px;
+  padding: 22px 55px;
 }
 
 .button-second {
+  font-size: 22px;
   background: white;
   color: red;
   border-radius: 50px;
-  padding: 15px;
+  padding: 22px 55px;
 }
 
 .circle {
@@ -124,4 +136,15 @@ header {
   display: inline-block;
   border-radius: 50%;
   background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.circle > img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
