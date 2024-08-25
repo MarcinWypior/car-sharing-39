@@ -228,3 +228,85 @@ header {
   padding: 11px 29px;
   text-align: center;
 }
+
+/* stylowanie sekcji service */
+.services {
+  background: #28272c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-header h2 {
+  color: white;
+  margin-top: 60px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-header h2 span {
+  width: 146px;
+  height: 47px;
+  margin-top: 0 13px;
+}
+
+.services-header h2::before,
+.services-header h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: red;
+  display: inline-block;
+}
+
+.service-elements {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.service-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 110px;
+}
+
+.service-element img {
+  margin-bottom: 15px;
+}
+
+.service-element h2 {
+  height: 26px;
+  color: white;
+  margin-top: 15px;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service-element p {
+  color: #b2b2b2;
+  width: 231px;
+  height: 80px;
+  margin: 15px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.service-element a {
+  margin-top: 15px;
+  background: red;
+  color: white;
+  border-radius: 40px;
+  width: 142px;
+  height: 40px;
+  font-size: 14px;
+  padding: 11px 29px;
+  text-align: center;
+}
