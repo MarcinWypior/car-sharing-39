@@ -4,28 +4,43 @@
   padding: 0;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 900px;
+body {
+  font-family: "Nunito Sans", sans-serif;
 }
 
-header {
+.container {
+  margin: 0 auto;
+  max-width: 1088px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  z-index: 9;
+  height: calc(100vh - 55px);
   background: url("../images/Image.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+header {
+  height: 100vh;
   width: 100%;
-  height: 70vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-self: center;
+  color: white;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.2);
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 70vh;
+  height: calc(100vh - 55px);
   position: absolute;
   top: 0;
   left: 0;
@@ -34,16 +49,17 @@ header {
 /* navbar styles */
 .navbar {
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 70vh;
+  background-color: #00000066;
   text-transform: uppercase;
-  width: 100%;
-  height: 100px;
+  position: relative;
+  z-index: 9;
+  border: 2px solid #ffffff33;
+}
+
+.navbar-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
 .logo {
@@ -65,13 +81,384 @@ header {
   font-size: 3vh;
   color: white;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88px;
+  padding: 40px;
+}
+
+.links a:hover {
+  background-color: #ffffff33;
 }
 
 /* info styles */
 
+.header-main {
+  height: calc(100vh - 88px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.info-text {
+  font-size: 18px;
+  text-align: center;
+}
+
+.info-title {
+  font-size: 27px;
+}
 .info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.button-first {
+  font-size: 22px;
+  background: red;
+  color: white;
+  border-radius: 50px;
+  padding: 22px 55px;
+}
+
+.button-second {
+  font-size: 22px;
+  background: white;
+  color: red;
+  border-radius: 50px;
+  padding: 22px 55px;
+}
+
+.circle {
+  width: 55px;
+  height: 55px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(0, -50%);
+}
+
+.circle > img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* stylowanie sekcji blog */
+
+.blog {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-title {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.blog-title h2 {
+  margin: 0 8px;
+}
+
+.blog-title::before,
+.blog-title::after {
+  content: " ";
+  width: 50px;
+  height: 3px;
+  background-color: red;
+  display: inline-block;
+}
+
+.blog-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog-element {
+  color: #6a6a6a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.blog-element img {
+  width: 352px;
+  height: 234px;
+}
+
+.blog-element h3 {
+  font-size: 19px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.blog-element p {
+  font-size: 14px;
+  width: 260px;
+  height: 79px;
+}
+
+.blog-element a {
+  margin-top: 15px;
+  background: red;
+  color: white;
+  border-radius: 40px;
+  width: 142px;
+  height: 40px;
+  font-size: 14px;
+  padding: 11px 29px;
+  text-align: center;
+}
+
+/* stylowanie sekcji service */
+.services {
+  background: #28272c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-header h2 {
+  color: white;
+  margin-top: 60px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-header h2 span {
+  width: 146px;
+  height: 47px;
+  margin-top: 0 13px;
+}
+
+.services-header h2::before,
+.services-header h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: red;
+  display: inline-block;
+}
+
+.service-elements {
+  max-width: 1088px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.service-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 110px;
+}
+
+.service-element img {
+  margin-bottom: 15px;
+  width: 170px;
+  height: 170px;
+}
+
+.service-element h2 {
+  height: 26px;
+  color: white;
+  margin-top: 15px;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.service-element p {
+  color: #b2b2b2;
+  width: 231px;
+  height: 80px;
+  margin: 15px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+.service-element a {
+  margin-top: 15px;
+  background: red;
+  color: white;
+  border-radius: 40px;
+  width: 142px;
+  height: 40px;
+  font-size: 14px;
+  padding: 11px 29px;
+  text-align: center;
+}
+
+/* Form Style */
+.contact {
+  margin-top: 55px;
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 35px;
+}
+.contact-title span {
+  font-size: 35px;
+  text-transform: uppercase;
+  width: 165px;
+  height: 47px;
+  margin: 0 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.contact-title::before,
+.contact-title::after {
+  content: "";
+  background: red;
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-photo {
+  width: 444px;
+  height: 317px;
+}
+
+.contact-form {
+  width: 444px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-self: center;
+  gap: 20px;
+  margin-bottom: 75px;
+}
+
+input[type="text"] {
+  padding: 15px;
+  border-radius: 3px;
+}
+
+textarea {
+  height: 140px;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid red;
+}
+button {
+  width: 50px;
+  align-self: flex-end;
+}
+
+form > label {
+  font-size: 10px;
+}
+
+.contact-form a {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+  border: 2px solid red;
+  border-radius: 30px;
+  align-self: flex-end;
+  width: 142px;
+  height: 40px;
+  padding: 10px 52px;
+}
+
+/* footer */
+
+.footer {
+  height: 233px;
+  background: #28272c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  padding: 40px 139px 0 139px;
+  padding-bottom: 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 1088px;
+  width: 100%;
+}
+
+.footer-elements {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer-links {
+  flex-grow: 0.3;
+  column-gap: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 100px;
+  font-size: 14px;
+}
+
+.footer-title {
+  margin-bottom: 22px;
+  font-size: 25px;
+}
+
+.footer-links > * {
+  padding: 5px;
+}
+.red {
+  color: red;
+}
+
+.footer-info {
+  color: #d1d1d1;
+  font-size: 12px;
 }
